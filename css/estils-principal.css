@@ -1,0 +1,291 @@
+@charset "UTF-8";
+/**
+ *  A T E N C I Ó
+ *
+ *  No modifiqueu aquest fitxer sense parlar-ho
+ *  amb la resta del grup, aquest es l'unic fitxer
+ *  que totes les altres pagines comparteixen,
+ *  d'aquest fitxer depén com es veuen.
+ *
+*/
+/**
+ *
+ *	Estils Desktop ▾
+ *
+*/
+html, body {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px; }
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.header {
+  position: fixed;
+  background-color: #001B48;
+  top: 0;
+  width: 100%;
+  z-index: 1; }
+
+.header-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 1em 0 0; }
+
+.header-menu {
+  margin: auto; }
+
+.header-menu-list {
+  padding: 0;
+  margin: 0; }
+
+.header-menu-icon, .header-menu h2 {
+  display: none; }
+
+.header-menu-list li {
+  display: inline-block;
+  margin-left: 1em; }
+
+.header-form {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: stretch;
+  grid-gap: 5px; }
+
+.header-form input {
+  background-color: #f8f9fa;
+  color: #001B48;
+  border: none;
+  border-bottom: 2px solid #018AC0;
+  margin: 10px 0;
+  padding: 0 0 0 4px; }
+
+.header-form button {
+  background-image: linear-gradient(#AAFBFF 10%, #018AC0 100%);
+  color: white;
+  font-family: inherit;
+  line-height: 1;
+  border: 1px solid white;
+  margin: 10px 0; }
+
+.header-form p {
+  color: white;
+  margin: auto; }
+
+.banner {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+  padding: 4.5em; }
+
+.banner::after {
+  content: '';
+  position: absolute;
+  background-color: #393e46;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  /* NOTE: cambiar la opacitat si es desitja que es veigi mes el banner */
+  z-index: -1; }
+
+.banner-title {
+  background-color: #018AC0;
+  color: #f8f9fa;
+  display: inline-block;
+  line-height: 1;
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+  padding: 0.5em; }
+
+.banner-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/banner-5.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: translateY(-10%) !important;
+  transition: background-image 0.3s ease-in;
+  z-index: -1;
+  /* NOTE: Per habilitar el effecte blur del banner descomenta el bloc de estils inferior */
+  /*filter: blur(5px);
+  top: -5% !important;
+  left: -5% !important;
+  width: 110% !important;
+  height: 110% !important;*/ }
+
+.body-container {
+  background-color: #f8f9fa;
+  display: grid;
+  grid-template-columns: 70% auto;
+  height: 100%; }
+
+.body-column-left {
+  padding: 3em; }
+
+.body-column-left section {
+  color: #4a5568;
+  padding-left: 2em;
+  border-left: 2px solid #018AC0; }
+
+.body-column-left section + section {
+  margin-top: 3em; }
+
+.body-column-left h2 {
+  font-weight: 800; }
+
+.body-column-right {
+  margin: auto;
+  padding: 3em; }
+
+.body-column-right img {
+  width: 100%; }
+
+.footer {
+  background-color: #001B48;
+  color: white;
+  padding: 2.5em 3em; }
+
+/*
+    GRID I FLEXBOX DEL FOOTER
+    CANVI REALITZAT
+*/
+.footer-container {
+  display: grid;
+  grid-template-columns: 33% auto 33%;
+  grid-template-rows: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px; }
+
+.footer-container div {
+  text-align: center;
+  padding: 10px 0; }
+
+/*
+    FLEXBOX DINTRE DE GRID
+*/
+.footer-section {
+  display: flex;
+  flex-direction: column; }
+
+.footer-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1em;
+  justify-content: center; }
+
+.footer-container div:nth-child(4) {
+  text-align: left; }
+
+.footer-info span {
+  text-align: left; }
+
+.footer-container div:last-of-type {
+  grid-column-start: 1;
+  grid-column-end: 4; }
+
+.footer-container div:last-of-type a {
+  color: #018AC0; }
+
+/**
+ *
+ *	Estils Smatrphone/Tablet ▾
+ *
+*/
+@media (max-width: 992px), (max-width: 1024px) and (orientation: landscape) {
+  body {
+    font-size: 2em; }
+
+  .header {
+    background-color: initial; }
+
+  .header-container {
+    display: block;
+    height: 130px;
+    padding: 0; }
+
+  .header-menu {
+    background-color: #001B48;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%; }
+
+  .header-menu h2 {
+    color: white;
+    display: initial;
+    font-size: 2em;
+    font-weight: 700;
+    margin: auto 16px; }
+
+  .header-menu-icon {
+    display: block;
+    grid-column: 2;
+    justify-self: end;
+    width: 70px;
+    margin: auto 16px; }
+
+  .header-menu-list {
+    background-color: #001B48;
+    display: grid;
+    position: fixed;
+    grid-template-rows: auto auto;
+    font-size: 1.5em;
+    top: -100px;
+    width: 100%;
+    transition: top 0.5s;
+    z-index: -1; }
+
+  .header-menu-list li {
+    display: block;
+    margin: 25px 20px; }
+
+  .header-menu-list li a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+  .header-menu-list i {
+    display: none; }
+
+  .header-form {
+    display: none; }
+
+  .banner-background {
+    filter: none; }
+
+  .banner {
+    margin-top: 130px; }
+
+  .banner-title {
+    font-size: 1.5em; }
+
+  .banner-background {
+    transform: translateY(0px) !important; }
+
+  .body-container {
+    grid-template-columns: auto; }
+
+  .body-column-right {
+    display: none; }
+
+  .footer-container {
+    /* grid-template-columns: auto auto; */ } }
+/* NOTE: colors utilitzats o per utilitzar: #ee6f57 #ff5200 #dd6b20 #c8543b */
+
+/*# sourceMappingURL=estils-principal.css.map */

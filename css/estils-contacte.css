@@ -1,0 +1,186 @@
+.body-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 2em;
+}
+.body-column-bottom {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+/*
+.body-column-js{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 2em;
+}
+
+*/
+.flex-container {
+  height:auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.flex-container .item1 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 1em;
+  text-align: left;
+  line-height: 3em;
+  font-size: 1em;
+}
+.flex-container .flex-containerConsulta {
+  width: 40%;
+  margin: 1em;
+}
+.flex-container .flex-containerButton {
+  width: 100%;
+  margin: 1em;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.button {
+    color: white;
+    font-size: 1em;
+    margin-top: 20px;
+    background-image: linear-gradient(#AAFBFF 10%, #018AC0 100%);
+    font-family: inherit;
+    color: white;
+    margin: 10px 0;
+    width: 10%;
+
+
+  }
+
+.body-column-right {
+  margin: 0;
+}
+
+.mapa{
+  height: 100%;
+  width: 100%;
+
+}
+
+.mapa iframe{
+  width: 100%;
+  height: 100%;
+  border: 0px solid ;
+  outline: 2px dashed blue;
+  outline-offset: 4px;
+}
+
+.opcio {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.opcio select{
+  background-color: blue;
+  margin: auto auto auto 0;
+  padding: 5px 10px;
+  color: white;
+  text-shadow: 4px 2px 4px #000000;
+  border-radius: 15px 35px 10px 5px;
+
+}
+
+.opcio p {
+  text-align: left;
+  margin: auto auto auto 0;
+}
+
+.opcio a {
+  color: blue;
+  background-color: rgba(0, 255, 0, 0.3);
+  font-size: 15px;
+  justify-content: center;
+}
+.opcio a:hover {
+  color: gray;
+}
+
+.opcio img{
+  margin: auto;
+  max-width: 351px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 2;
+  transition: all 2s;
+
+}
+
+.opcio img:hover{
+  width: 50%;
+  height: 50%;
+}
+
+@media screen and (max-width: 992px) and (max-width: 1024px)  {
+
+  .body-container{
+    display: block;
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+
+  .mapa iframe{
+    width: 100%;
+    height: 75%;
+    margin-top: 2em;
+
+  }
+  .zoom {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    overflow: hidden;
+}
+  .body-column-right{
+    display: block;
+  }
+  .opcio{
+    display: block;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin: -2em;
+  }
+  .opcio select{
+    font-size: 1em;
+    padding: 7px;
+  }
+  .opcio select option{
+    font-size: 10px;
+  }
+
+  .opcio img{
+    display: none;
+  }
+  .opcio a{
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape){
+  .mapa iframe{
+    width: 100%;
+    height: 250px;
+    margin-top: 2em;
+
+  }
+  .opcio{
+    margin-top: 35%;
+
+  }
+}

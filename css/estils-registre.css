@@ -1,0 +1,53 @@
+.body-container {
+  grid-template-columns: auto auto;
+  justify-content: center; }
+  .body-container .formulari {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1.5em;
+    /*
+      ".opcions:" editem els estils dels "inputs".
+      Com podem veure he aplicat un marge de 10px,
+      i una amplada de 250px.
+    */ }
+    .body-container .formulari > .opcions {
+      margin: 10px;
+      width: 250px; }
+  .body-container .foto {
+    width: 200px;
+    height: 180px;
+    justify-content: right;
+    margin: auto;
+    border: black dashed 2px;
+    border-radius: 2px; }
+    .body-container .foto:hover {
+      opacity: 0.8; }
+  .body-container button {
+    margin-top: 20px;
+    background-color: #dd6b20;
+    color: white; }
+    .body-container button:hover {
+      opacity: 0.8; }
+
+@media (max-width: 992px) {
+  .body-container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto; }
+    .body-container .formulari {
+      display: flex;
+      flex-direction: column; }
+      .body-container .formulari .opcions {
+        width: 92%;
+        height: 100%;
+        font-size: 2.5em;
+        padding-left: 50px; }
+    .body-container .foto {
+      width: 50%;
+      background: transparent;
+      border: transparent;
+      margin: 1em auto; }
+    .body-container button {
+      font-size: 40px; } }
+
+/*# sourceMappingURL=estils-registre.css.map */

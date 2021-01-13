@@ -54,10 +54,11 @@
                   <span class="input-group-text"> <i class="fa fa-building"></i> </span>
               </div>
               <select class="form-control">
-                <option selected=""> Select job type</option>
-                <option>Designer</option>
-                <option>Manager</option>
-                <option>Accaunting</option>
+                <option selected="">Tria el teu rol</option>
+                <option>Professor</option>
+                <option>Alumne</option>
+                <option>Empleat</option>
+                <option>Gerent</option>
               </select>
             </div> <!-- form-group end.// -->
               <div class="form-group input-group">

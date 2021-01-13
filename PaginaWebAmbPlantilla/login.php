@@ -12,7 +12,7 @@
     <!-- Begin page content -->
     <main class="flex-shrink-0">
       <div class="container">
-        <h1 class="mt-5 text-center py-30">Iniciar Sessio</h1>
+        <h1 class="mt-5 text-center py-30">Log In</h1>
 
 
         <!-- //compartiment a l'esquerra amb una taula amb atributs? -->
@@ -28,14 +28,14 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Contrasenya</label>
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
                   <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                 </div>
 
             </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Iniciar sessio</button>
-            <a href="./register.php" class="btn btn-secondary btn-lg btn-block">Registrar-se</a>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Log In</button>
+            <a href="./register.php" class="btn btn-secondary btn-lg btn-block">Register</a>
           </form>
 
 

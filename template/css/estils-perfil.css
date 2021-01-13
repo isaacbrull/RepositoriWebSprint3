@@ -1,0 +1,144 @@
+.body-container {
+  display: grid;
+  grid-template-columns: auto auto;
+
+
+}
+
+.header-profile {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1em;
+
+}
+
+.header-profile p {
+  color: white;
+  margin: auto;
+  padding: 0;
+
+
+}
+
+.header-profile img {
+    width: 30px;
+    margin: auto;
+}
+
+.body-column-left h3 {
+
+  padding-left: 2em;
+}
+
+.body-column-left p {
+
+}
+
+.body-column-left a {
+  color: #4a5568 !important;
+
+}
+
+.body-column-right {
+  margin: 0;
+
+}
+
+.alta img{
+  width: 20%;
+}
+
+.edel img{
+  width: 20px;
+}
+
+/*Estils del format de dins del desplegable*/
+.estilsdespleg {
+    user-select: none;
+    cursor: pointer;
+}
+
+/*Format del contingut de dins*/
+.desplegable-contingut {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    top: 50px;
+    right: 1em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/*Format de les vinculacions*/
+.desplegable-contingut a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*Afegim el format de les "div"*/
+.show {
+    display:block;
+}
+
+
+@media (max-width: 992px) {
+
+  .header-profile {
+    display: none;
+  }
+
+}
+
+table th {
+  padding: 0 1em;
+
+}
+
+table th + th {
+  border-left: 1px solid #4a5568;
+
+}
+
+table tr {
+  border: 0px;
+}
+
+table td {
+  text-align: center;
+  padding: 0 5px;
+}
+
+table tfoot td {
+  padding-top: 10px;
+  text-align: right;
+}
+
+table td + td {
+  border-left: 1px solid #4a5568;
+
+
+}
+
+table td:last-child{
+  border-left:none;
+}
+
+.table-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.table-icons a + a {
+    margin-left: 5px;
+}
+
+table i {
+    color: black;
+}
+
+.footer-container {
+    grid-template-rows: auto;
+}

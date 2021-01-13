@@ -9,7 +9,7 @@
     <!-- Navigation bar | additionally you can specify the type of the navigation bar adding ( $navbar=type ) before the requirement -->
     <?php $tab=0; $navbar=0; require_once('./template/navbar.php') ?>
 
-	<div class="banner text-center text-white"><h2>Banner</h2></div>
+	<!--<div class="banner text-center text-white"><h2>Banner</h2></div>-->
 
     <!-- Begin page content -->
     <main class="flex-shrink-0">
@@ -18,10 +18,9 @@
 <section class="mb-4">
 
   <!--Section heading-->
-  <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+  <h2 class="h1-responsive font-weight-bold text-center my-4">Contacta amb nosaltres</h2>
   <!--Section description-->
-  <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-      a matter of hours to help you.</p>
+  <p class="text-center w-responsive mx-auto mb-5">Tens alguna pregunta? Contacta amb nosaltres emplenant aquest formulari.</p>
 
   <div class="row">
 
@@ -36,7 +35,7 @@
                   <div class="col-md-6">
                       <div class="md-form mb-0">
                           <input type="text" id="name" name="name" class="form-control">
-                          <label for="name" class="">Your name</label>
+                          <label for="name" class="">El teu nom</label>
                       </div>
                   </div>
                   <!--Grid column-->
@@ -45,7 +44,7 @@
                   <div class="col-md-6">
                       <div class="md-form mb-0">
                           <input type="text" id="email" name="email" class="form-control">
-                          <label for="email" class="">Your email</label>
+                          <label for="email" class="">El teu Correu</label>
                       </div>
                   </div>
                   <!--Grid column-->
@@ -58,7 +57,7 @@
                   <div class="col-md-12">
                       <div class="md-form mb-0">
                           <input type="text" id="subject" name="subject" class="form-control">
-                          <label for="subject" class="">Subject</label>
+                          <label for="subject" class="">Tema</label>
                       </div>
                   </div>
               </div>
@@ -72,7 +71,7 @@
 
                       <div class="md-form">
                           <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                          <label for="message">Your message</label>
+                          <label for="message">Missatge</label>
                       </div>
 
                   </div>
@@ -82,7 +81,7 @@
           </form>
 
           <div class="text-center text-md-left">
-              <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+              <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Envia</a>
           </div>
           <div class="status"></div>
       </div>
@@ -92,15 +91,15 @@
       <div class="col-md-3 text-center">
           <ul class="list-unstyled mb-0">
               <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                  <p>San Francisco, CA 94126, USA</p>
+                  <p>43870 Amposta, Tarragona, Espanya</p>
               </li>
 
               <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                  <p>+ 01 234 567 89</p>
+                  <p>+34 977 70 00 43</p>
               </li>
 
               <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>contact@mdbootstrap.com</p>
+                  <p>contacta@proiectus.cat</p>
               </li>
           </ul>
       </div>

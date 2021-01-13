@@ -42,10 +42,10 @@
                   <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
               </div>
               <select class="custom-select" style="max-width: 120px;">
-                  <option selected="">+971</option>
-                  <option value="1">+972</option>
-                  <option value="2">+198</option>
-                  <option value="3">+701</option>
+                  <option selected="">+34</option>
+                  <option value="1">+33</option>
+                  <option value="2">+39</option>
+                  <option value="3">+376</option>
               </select>
                 <input name="" class="form-control" placeholder="Phone number" type="text">
               </div> <!-- form-group// -->
@@ -74,9 +74,9 @@
                   <input class="form-control" placeholder="Repeat password" type="password">
               </div> <!-- form-group// -->
               <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                  <button type="submit" class="btn btn-primary btn-block"> Registrar-se  </button>
               </div> <!-- form-group// -->
-              <p class="text-center">Have an account? <a href="./login.php">Log In</a> </p>
+              <p class="text-center">Ja tens compte? <a href="./login.php">Iniciar sessio</a> </p>
           </form>
         <!-- </div> -->
         <div class="col-3">

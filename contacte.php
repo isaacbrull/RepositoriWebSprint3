@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--prova-->
+
     <!-- Header -->
     <?php $style = 'estils-contacte.css'; require_once('./template/header.php'); ?>
 

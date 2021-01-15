@@ -15,7 +15,11 @@
   const menuform = document.querySelector('.header-form');
   /* Function calls */
   //slide(1,3);
-
+  var myCar = new Object();
+  myCar.make = 'Ford';
+  myCar.model = 'Mustang';
+  myCar.year = 1969;
+  console.log(myCar);
 
   function slide(n,t) {
 

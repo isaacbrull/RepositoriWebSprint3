@@ -43,3 +43,13 @@ console.log(persones.has("Ximo"));
 persones.forEach(persona => {
   console.log(`Benvingut ${persona}!`);
 });
+
+//Objectes
+//creacio constructor
+function ordenador(marca, peso, pantalla, color) {
+	this.Marca = marca;
+	this.Peso = peso;
+	this.Pantalla = pantalla;
+	this.Color = color;
+}
+var compra = new movil("Alcatel", "5 onzas", "5 pulgadas", "Negro");

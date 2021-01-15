@@ -1,109 +1,84 @@
-<header class="header">
-  <div class="header-container">
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 
-	<?php switch($navtype):
-		case 0:
+<?php
+$tab = $tab ?? null;
+switch ($navbar ?? 0):
+  case 0:?>
+    <a class="navbar-brand" href="#">Projectus </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-			require_once('./php/database.php');
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item <?php echo($tab === 0 ? 'active' : ''); ?>">
+          <a class="nav-link" href="./index.php"><i class="fa fa-home" aria-hidden="true"></i> Inici</a>
+        </li>
 
-			$nomusuari = $_POST['usuari'] ?? null;
-			$contraseña = $_POST['contraseña'] ?? null;
+        <li class="nav-item <?php echo($tab === 1 ? 'active' : ''); ?>">
+          <a class="nav-link" href="./about.php"><i class="fa fa-info" aria-hidden="true"></i> About</a>
+        </li>
+        <li class="nav-item <?php echo($tab === 2 ? 'active' : ''); ?>">
+          <a class="nav-link" href="./contact.php"><i class="fa fa-phone" aria-hidden="true"></i> Contacte</a>
+        </li>
+        <li class="nav-item">
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Log In</a>
+            <a class="dropdown-item" href="#">Contacte</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Que fem? Qui som?</a>
+          </div>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="./login.php">
+        <input class="form-control mr-sm-2" type="search" placeholder="email@projectus.com" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In</button>
+      </form>
+    </div>
+<?php break;
+  case 1: ?>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Projectus </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-			//Creem un nou objecte de Database
-			$DB = new Database();
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item <?php echo($tab === 0 ? 'active' : ''); ?>">
+            <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> Gestio Central </a>
+          </li>
+          <li class="nav-item <?php echo($tab === 1 ? 'active' : ''); ?>">
+            <a class="nav-link" href="#"><i class="fa fa-info" aria-hidden="true"></i> Gestio Instituts</a>
+          </li>
+          <li class="nav-item <?php echo($tab === 2 ? 'active' : ''); ?>">
+            <a class="nav-link" href="#"><i class="fa fa-phone" aria-hidden="true"></i> Gestio Empleats</a>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <span class="navbar-text">
+      Benvingut,  Manolo Lama
+    </span>
+      </div>
+<?php break;
+    case 2: ?>
+	<!-- Alternative navbar here -->
 
-      //array_key_exists Comprova que dintre de Get existeix el valor
-			if (array_key_exists('logout', $_GET)) {
-				session_destroy();
-				unset($_SESSION['current-user']);
-			}
+<?php break;
+  endswitch;
+  unset($tab, $navbar); ?>
 
-			//$_SESSION Guarda el usuari de la sessió, en cas de no tindre una sessió, serà null
-			//la variable guarda la sessió al servidor fins que és tanca la sessio
-			$usuariactual = $_SESSION['current-user'] ?? null;
-		?>
-
-		<div class="header-menu">
-		  <h2>Menú</h2>
-		  <img class="header-menu-icon" src="./img/bars-solid.svg"/>
-		  <ul class="header-menu-list" data-state="hidden">
-			<li><a href="./index.php"><i class="fas fa-home"></i> Inici</a></li>
-			<li><a href="./contacte.php"><i class="fas fa-map-marker-alt"></i> Contacte</a></li>
-		  </ul>
-		</div>
-		<form class="header-form" action="#" method="post">
-
-		<?php
-			//Validació, comprova usuari i contrasenya a la BD
-			if ($usuariactual) {
-				header('Location: ./perfil.php');
-			}
-
-			//Realitza la connexió a la base de dades
-			//
-			if ($nomusuari || $contraseña) {
-				$user = $DB->validar($nomusuari,$contraseña);
-				if ($user) {
-
-					//$hash = md5(uniqid());
-
-					//setcookie('projekt-cat', $user['idUsuari']);
-					$_SESSION['current-user'] = $user;
-
-					header('Location: ./perfil.php');
-				} else {
-					echo '<p>Nom d\'usuari o contrasenya incorrectes!</p>';
-				}
-			}
-		?>
-
-			<input type="text" name="usuari" placeholder="Usuari"/>
-			<input type="password" name="contraseña" placeholder="Contraseña"/>
-
-			<button type="submit" data-button="entrada">Entra</button>
-			<button type="submit" data-button="registre">Registra't</button>
-		</form>
-
-		<?php break; ?>
-		<?php case 1: ?>
-
-		<div class="header-menu">
-		  <h2>Menú</h2>
-		  <img class="header-menu-icon" src="./img/bars-solid.svg"/>
-		  <ul class="header-menu-list" data-state="hidden">
-			  <!-- Es plenara automaticament en js en responsive mostrant les opcions de sortida i modificacio del perfil -->
-		  </ul>
-		</div>
-		<div class="header-profile" id="profile">
-		  <img src="./img/perfil.png" />
-		  <p id="desplegablePerfil" class="estilsdespleg">Hola, <?php echo $currentuser['Username']; ?></p>
-		  <div id="myDropdown" class="desplegable-contingut">
-			<a href="#">Modificar</a>
-			<a href="./index.php?logout">Sortir</a>
-		  </div>
-		</div>
-
-		<?php break; ?>
-		<?php case 2: ?>
-
-		<div class="header-menu">
-		  <h2>Menú</h2>
-		  <img class="header-menu-icon" src="./img/bars-solid.svg"/>
-		  <ul class="header-menu-list" data-state="hidden">
-              <li><a href="./perfil.php?tab=<?php echo $profiletab; ?>"><i class="fas fa-chevron-left"></i></a></li>
-		  </ul>
-		</div>
-		<div class="header-profile" id="profile">
-		  <img src="./img/perfil.png" />
-		  <p id="desplegablePerfil" class="estilsdespleg">Hola, <?php echo $currentuser['Username']; ?></p>
-		  <div id="myDropdown" class="desplegable-contingut">
-			<a href="#">Modificar</a>
-			<a href="./index.php?logout">Sortir</a>
-		  </div>
-		</div>
-
-		<?php break; ?>
-		<?php endswitch; ?>
-
-  </div>
+	</nav>
 </header>

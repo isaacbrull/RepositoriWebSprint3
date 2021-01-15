@@ -20,3 +20,26 @@ for (i=0;i<professor.length;i++){
    	console.log("El professor " + professor[i] + " és situa a el " + i + " de la llista de professors registrats.")
 }
 
+//Map
+
+
+//Set
+let persones = new Set();
+
+persones.add("Ximo");
+persones.add("Isaac");
+persones.add("Sofian");
+persones.add("Joel");
+console.log(persones.size); // 4
+persones.add("Gos");
+console.log(persones.size); // 4
+
+console.log(persones.has("Ximo"));
+//Esborrar a pobre Ximo
+persones.delete("Ximo");
+console.log(persones.has("Ximo"));
+
+//Imprimir l'array
+persones.forEach(persona => {
+  console.log(`Benvingut ${persona}!`);
+});

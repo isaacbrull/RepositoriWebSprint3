@@ -40,7 +40,7 @@ const usuaris = [
     }
 
 ]
-usuaris.map(usuaris => usuaris)
+console.log(usuaris.map(usuaris => usuaris))
 //Set
 let persones = new Set();
 

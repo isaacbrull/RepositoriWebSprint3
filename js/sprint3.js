@@ -21,8 +21,26 @@ for (i=0;i<professor.length;i++){
 }
 
 //Map
+const usuaris = [
+    {
+        id:1,
+        nom: 'Isaac',
+        admin: true,
 
+    },
+    {
+        id:2,
+        nom: 'Ximo',
+        admin: true,
+    },
+    {
+        id:3,
+        nom: 'ISofian',
+        admin: false,
+    }
 
+]
+usuaris.map(usuaris => usuaris)
 //Set
 let persones = new Set();
 

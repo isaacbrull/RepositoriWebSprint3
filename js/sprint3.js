@@ -41,6 +41,7 @@ const usuaris = [
 
 ]
 usuaris.map(usuaris => usuaris)
+
 //Set
 let persones = new Set();
 
@@ -64,7 +65,7 @@ persones.forEach(persona => {
 
 //Objectes
 //creacio constructor
-function ordenador(marca, peso, pantalla, color) {
+function hosting(marca, peso, pantalla, color) {
 	this.Marca = marca;
 	this.Peso = peso;
 	this.Pantalla = pantalla;

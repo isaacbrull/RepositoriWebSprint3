@@ -64,10 +64,15 @@ persones.forEach(persona => {
 
 //Objectes
 //creacio constructor
-function hosting(marca, peso, pantalla, color) {
-	this.Marca = marca;
-	this.Peso = peso;
-	this.Pantalla = pantalla;
-	this.Color = color;
+function hosting(espai, correus, basedades, capacitatbanda) {
+	this.espai = espai;
+	this.correus = correus;
+	this.basedades = basedades;
+	this.capacitatbanda = capacitatbanda;
 }
-var compra = new movil("Alcatel", "5 onzas", "5 pulgadas", "Negro");
+//Creació Objecte
+var adquisicio = new hosting("2Gb", "15 comptes", "1Gb", "500Mb");
+console.log(adquisicio);
+
+
+//Promises

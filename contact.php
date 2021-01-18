@@ -84,6 +84,14 @@
               <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Envia</a>
           </div>
           <div class="status"></div>
+
+          <!--POTSER LINK FALLA-->
+          <div>
+            <br></br>
+            <video width="320" height="240" controls>
+                <source src="img/funerario.mp4" type="video/mp4">
+            </video>
+          </div>
       </div>
       <!--Grid column-->
 

@@ -76,3 +76,18 @@ console.log(adquisicio);
 
 
 //Promises
+var promise = new Promise(function(resolve, reject) {
+  
+    function revisarError() {
+      resolve('No sha detectat cap error')
+    }
+  
+    setTimeout(revisarError, 10000)
+  
+  })
+  
+  console.log(promise)
+
+  promise.then(function(message) {
+    console.log(message) 
+  })

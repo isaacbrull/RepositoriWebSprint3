@@ -26,7 +26,10 @@
 
       <!--Grid column-->
       <div class="col-md-9 mb-md-0 mb-5">
-          <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+        <!--POTSER LINK FALLA-->
+        <!--POTSER LINK FALLA-->
+        <!--POTSER LINK FALLA-->
+          <form id="contact-form" name="contact-form" action="/PHP/sendmail.php" method="POST">
 
               <!--Grid row-->
               <div class="row">
@@ -56,8 +59,8 @@
               <div class="row">
                   <div class="col-md-12">
                       <div class="md-form mb-0">
-                          <input type="text" id="subject" name="subject" class="form-control">
-                          <label for="subject" class="">Tema</label>
+                          <input type="text" id="last_name" name="last_name" class="form-control">
+                          <label for="last_name" class="">Cognom</label>
                       </div>
                   </div>
               </div>
@@ -89,6 +92,8 @@
           <div>
             <br></br>
             <video width="320" height="240" controls>
+              <!--POTSER LINK FALLA-->
+              <!--POTSER LINK FALLA-->
                 <source src="img/funerario.mp4" type="video/mp4">
             </video>
           </div>

@@ -58,7 +58,7 @@
   <p><a href="./perfil.php?tab=1">Gestió de alumnes</a></p>
   <p><a href="./perfil.php?tab=2">Gestió de grups</a></p>-->
         <?php endif; ?>
-        <a href="./perfil.php?tab=3" class="w3-bar-item w3-button">Gestió de propostes</a>
+        <a href="./perfil.php?tab=3" class="w3-bar-item w3-button" style="width:25%; background-color: lightblue;">Gestió de propostes</a>
   <!--<p><a href="./perfil.php?tab=3">Gestió de propostes</a></p>-->
       </section>
     </div>

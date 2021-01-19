@@ -35,7 +35,7 @@ class Proposta {
                 <tbody>';
 
         foreach ($query as $row) {
-			if ($row['Estat'] == 'No acceptat') {
+
                 echo '<tr>
                         <td>'. $row['Nom'] .'</td>
                         <td>'. ($row['Estat'] == 'No acceptat' ? 'Pendent per acceptar' : 'Proposta ja acceptada').'</td>
@@ -48,7 +48,7 @@ class Proposta {
                             <div>
                         </td>
                     </tr>';
-			}
+			
       }
 
       echo '    </tbody>

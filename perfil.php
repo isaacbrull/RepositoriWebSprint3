@@ -62,7 +62,7 @@
   <!--<p><a href="./perfil.php?tab=3">Gestió de propostes</a></p>-->
       </section>
     </div>
-    <div class="body-column-right"  style="justify-content: center  align-items: center">
+    <div class="body-column-right" style="justify-content: center; align-items: center;">
       <?php
 
         //if ($currentuser['Tipus'] === 'Professor') {

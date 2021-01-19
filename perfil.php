@@ -43,7 +43,7 @@
 	<div class="banner text-center text-white"><h3 class="d-inline bg-dark px-2 py-1">PROVA</h3></div>
 
   <?php if($currentuser['Tipus'] !==  'Professor' || 'Alumne' || null): ?>
-    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+    <div class="w3-sidebar w3-bar-block w3-blue" style="width:25%">
   <h3 class="w3-bar-item">Menu</h3>
   <a href="./perfil.php?tab=0" class="w3-bar-item w3-button">Gestió de professors</a>
   <br></br>

@@ -21,9 +21,3 @@ main>.container {
   background-size: cover;
   background-position: top;
 }
-.body-column-right {
-  justify-content: center;
-}
-.body-column-right {
-  align-items: center;
-}

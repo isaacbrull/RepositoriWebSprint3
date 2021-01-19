@@ -27,10 +27,10 @@
 			$targetproposta = $DB->consultarPropostaId($pid);
 		}
 
-        if (!$currentuser ||  (($action == 1 || $action == 2) && !$targetproposta)) {
-            header('HTTP/1.1 403 Forbidden');
-            exit('403 Forbidden');
-        }
+        // if (!$currentuser ||  (($action == 1 || $action == 2) && !$targetproposta)) {
+        //     header('HTTP/1.1 403 Forbidden');
+        //     exit('403 Forbidden');
+        // }
 
       ?>
 

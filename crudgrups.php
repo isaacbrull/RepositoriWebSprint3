@@ -29,10 +29,10 @@
             $targetgrup = $DB->consultarGrupId($gid);
         }
 
-        if (!$currentuser || $currentuser['Tipus'] !== 'Professor' || (($action == 1 || $action == 2) && !$targetgrup)) {
-            header('HTTP/1.1 403 Forbidden');
-            exit('403 Forbidden');
-        }
+        // if (!$currentuser || $currentuser['Tipus'] !== 'Professor' || (($action == 1 || $action == 2) && !$targetgrup)) {
+        //     header('HTTP/1.1 403 Forbidden');
+        //     exit('403 Forbidden');
+        // }
 
       ?>
 

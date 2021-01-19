@@ -33,7 +33,7 @@ class Grups {
                         <th>Nom grup</th>
                         <th>Nom tutor</th>
                         <th>Nom institut</th>
-                        <td><a href="./crudgrups.php?action=0"><i class="fas fa-plus"></i></a></td>
+                        <td><a href="./crudgrups.php?action=0"><i class="fa fa-plus" aria-hidden="true"></i></a></td>
                     </tr>
                 </thead>
                 <tbody>';
@@ -46,8 +46,8 @@ class Grups {
                         <td>'. $row['nomInstitut'] .'</td>
                         <td>
                             <div class="table-icons">
-                                <a href="./crudgrups.php?gid='. $row['idGrup']. '&action=1"><i class="fas fa-edit"></i></a>
-                                <a href="./crudgrups.php?gid='. $row['idGrup']. '&action=2"><i class="fas fa-trash-alt"></i></a>
+                                <a href="./crudgrups.php?gid='. $row['idGrup']. '&action=1"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="./crudgrups.php?gid='. $row['idGrup']. '&action=2"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             <div>
                         </td>
                     </tr>';

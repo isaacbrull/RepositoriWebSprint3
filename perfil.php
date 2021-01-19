@@ -46,8 +46,11 @@
     <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
   <h3 class="w3-bar-item">Menu</h3>
   <a href="./perfil.php?tab=0" class="w3-bar-item w3-button">Gestió de professors</a>
+  <br></br>
   <a href="./perfil.php?tab=1" class="w3-bar-item w3-button">Gestió de alumnes</a>
+  <br></br>
   <a href="./perfil.php?tab=2" class="w3-bar-item w3-button">Gestió de grups</a>
+  <br></br>
   
 </div>
   <!--<p><a href="./perfil.php?tab=0">Gestió de professors</a></p>

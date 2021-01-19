@@ -22,7 +22,7 @@ class Proposta {
     $query = $this->DB->query($query);
 
     if ($query) {
-        echo '<table border="1" frame="void" rules="cols">
+        echo '<table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Nom</th>

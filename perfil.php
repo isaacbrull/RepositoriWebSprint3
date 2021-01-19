@@ -62,7 +62,7 @@
   <!--<p><a href="./perfil.php?tab=3">Gestió de propostes</a></p>-->
       </section>
     </div>
-    <div class="body-column-right" style="justify-content: center; align-items: center;">
+    <div class="container">
       <?php
 
         //if ($currentuser['Tipus'] === 'Professor') {
@@ -87,7 +87,7 @@
 
       ?>
 
-
+</div>
 
 
     <!-- Footer | additionally you can specify the type of the navigation bar adding ( $footer=type ) before the requirement -->

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" class="h-100">
+<link rel="stylesheet" href="/css/custom.css">
 
   <!-- Header | additionally you can specify a custom css file by adding ( $style=file.css ) before the requirement -->
   <?php require_once('./template/header.php') ?>

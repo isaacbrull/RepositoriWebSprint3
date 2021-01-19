@@ -38,7 +38,7 @@ class Professor {
                         <th>Telefon</th>
                         <th>Data Naixement</th>
                     	<!--  <th>Estat</th> -->
-                        <td><a href="./crudusuaris.php?action=0&type=1"><i class="fas fa-plus"></i></a></td>
+                        <td><a href="./crudusuaris.php?action=0&type=1"><i class="fa fa-plus" aria-hidden="true"></i></a></td>
                     </tr>
                 </thead>
                 <tbody>';
@@ -55,8 +55,8 @@ class Professor {
                     <!--<td>'. $row['Estat'] .'</td>-->
                     <td>
                         <div class="table-icons">
-                            <a href="./crudusuaris.php?uid='. $row['idUsuari']. '&action=1&type=1"><i class="fas fa-edit"></i></a>
-                            <a href="./crudusuaris.php?uid='. $row['idUsuari']. '&action=2&type=1"><i class="fas fa-trash-alt"></i></a>
+                            <a href="./crudusuaris.php?uid='. $row['idUsuari']. '&action=1&type=1"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="./crudusuaris.php?uid='. $row['idUsuari']. '&action=2&type=1"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         <div>
                     </td>
                 </tr>';

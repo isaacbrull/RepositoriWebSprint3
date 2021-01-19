@@ -29,7 +29,7 @@ class Proposta {
                         <th>Estat</th>
                         <th>Data Publicació</th>
                         <th>Data Acceptació</th>
-                        <td><a href="./crudpropostes.php?action=0"><i class="fas fa-plus"></i></a></td>
+                        <td><a href="./crudpropostes.php?action=0"><i class="fa fa-plus" aria-hidden="true"></i></a></td>
                     </tr>
                 </thead>
                 <tbody>';
@@ -43,12 +43,12 @@ class Proposta {
                         <td>'. ($row['DataAcceptacio'] ? $row['DataAcceptacio'] : 'No acceptada') .'</td>
                         <td>
                             <div class="table-icons">
-                                <a href="./crudpropostes.php?pid='. $row['idProposta']. '&action=1"><i class="fas fa-edit"></i></a>
-                                <a href="./crudpropostes.php?pid='. $row['idProposta']. '&action=2"><i class="fas fa-trash-alt"></i></a>
+                                <a href="./crudpropostes.php?pid='. $row['idProposta']. '&action=1"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="./crudpropostes.php?pid='. $row['idProposta']. '&action=2"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             <div>
                         </td>
                     </tr>';
-			
+
       }
 
       echo '    </tbody>

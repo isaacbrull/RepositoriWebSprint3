@@ -41,7 +41,7 @@
     <?php require_once('./template/footer.php') ?>
 
     <!--Fitxer Javascript-->
-    <script src="/js/sprint3.js" language="javascript" type="text/javascript"></script>
+    <script src="js/sprint3.js" language="javascript" type="text/javascript"></script>
 
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
   </body>

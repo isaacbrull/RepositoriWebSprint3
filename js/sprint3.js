@@ -1,4 +1,4 @@
-var alumne = new Array(6)
+var alumne = new Array(7)
 
 alumne[0] = "Ximo"
 alumne[1] = "Isaac"
@@ -6,6 +6,12 @@ alumne[2] = "Sofian"
 alumne[3] = "Joel"
 alumne[4] = "Hideo Kojima"
 alumne[5] = "Juanito"
+alumne[6] = "Andrei"
+
+//Ordena al a l'abecedari
+    alumne.sort();
+//Ordena al revés
+    //alumne.reverse();
 
 for (i=0;i<alumne.length;i++){
    	console.log("L'alumne " + alumne[i] + " és situa a el " + i + " de la llista d'alumnes registrats.")
@@ -19,16 +25,15 @@ professor[2] = "Toni"
 for (i=0;i<professor.length;i++){
    	console.log("El professor " + professor[i] + " és situa a el " + i + " de la llista de professors registrats.")
 }*/
-var professors = [
-  {name: “Alex”, assignatura: “M6”},
-  {name: “Joan”, assignatura: “M7”},
-  {name: “Toni”, assignatura: “M7”}
-  
-];
-
-var professorsM7 =  professors.filter(function(profe) {
-  return profe.assignatura == “M7”;
-});
+// var professors = [
+//   {name: “Alex”, assignatura: “M6”},
+//   {name: “Joan”, assignatura: “M7”},
+//   {name: “Toni”, assignatura: “M7”}
+// ];
+//
+// var professorsM7 =  professors.filter(function(profe) {
+//   return profe.assignatura == “M7”;
+// });
 
 //Map
 const usuaris = [
@@ -81,9 +86,27 @@ function hosting(espai, correus, basedades, capacitatbanda) {
 	this.capacitatbanda = capacitatbanda;
 }
 //Creació Objecte
-var adquisicio = new hosting("2Gb", "15 comptes", "1Gb", "500Mb");
-console.log(adquisicio);
 
+//No funciona
+// var adquisicio = new hosting();
+//
+// adquisicio empresa1 = 10;
+// adquisicio empresa2 = 12;
+//
+// delete adquisicio empresa1;
+//
+// console.log('empresa2' in adquisicio);
+
+var adquisicio1 = new hosting("2Gb", "15 comptes", "1Gb", "500Mb");
+var adquisicio2 = new hosting("4Gb", "30 comptes", "2Gb", "1024Mb");
+var adquisicio3 = new hosting("6Gb", "50 comptes", "3Gb", "2048Mb");
+
+
+console.log(adquisicio1);
+console.log(adquisicio2);
+console.log(adquisicio3);
+
+   	console.log("L'espai total del hosting més barat és de " + adquisicio1.espai + " i conté un total de " + adquisicio1.correus + " de correu");
 
 //Promises
 function getPosts() {

@@ -58,6 +58,21 @@ const usuaris = [
 
 ]
 console.log(usuaris.map(usuaris => usuaris))
+//Map de Isaac Brull
+let informeAlumnes = new Map();
+informeAlumnes.set('Sofian', 'encarregat de la teoria');
+informeAlumnes.set('Ximo', 'encarregat de coordiar el grup');
+informeAlumnes.set('Isaac', 'encarregat de programació');
+informeAlumnes.size;
+
+
+for (let [key, value] of informeAlumnes) {
+  console.log(key + ' te la funció de ' + value);
+}
+
+informeAlumnes.clear();
+informeAlumnes.size;
+
 //Set
 let persones = new Set();
 

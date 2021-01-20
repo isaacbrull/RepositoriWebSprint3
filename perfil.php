@@ -41,10 +41,11 @@
       //echo $usuariactual;
     ?>
 
-	<div class="banner text-center text-white"><h3 class="d-inline bg-dark px-2 py-1">Menu</h3></div>
+	<div class="banner text-center text-white"><h3 class="d-inline bg-dark px-2 py-1">PROVA</h3></div>
 
   <?php if($currentuser['Tipus'] !==  'Professor' || 'Alumne' || null): ?>
-    <div class="col-sm-8 align-self-center text-center" style="width:25%; background-color: lightblue;  height: 200px;">
+    <div class="col-sm-8 align-self-center text-center" style="width:25%; background-color: lightblue;">
+  <h3 class="w3-bar-item">Menu</h3>
   <a href="./perfil.php?tab=0" class="w3-bar-item w3-button">Gestió de professors</a>
   <br></br>
   <a href="./perfil.php?tab=1" class="w3-bar-item w3-button">Gestió de alumnes</a>

@@ -25,15 +25,16 @@ professor[2] = "Toni"
 for (i=0;i<professor.length;i++){
    	console.log("El professor " + professor[i] + " és situa a el " + i + " de la llista de professors registrats.")
 }*/
-// var professors = [
-//   {name: “Alex”, assignatura: “M6”},
-//   {name: “Joan”, assignatura: “M7”},
-//   {name: “Toni”, assignatura: “M7”}
-// ];
-//
-// var professorsM7 =  professors.filter(function(profe) {
-//   return profe.assignatura == “M7”;
-// });
+var professors = [
+  {name: 'Alex', assignatura: 'M6'},
+  {name: 'Joan', assignatura: 'M7'},
+  {name: 'Toni', assignatura: 'M7'}
+  
+];
+
+var professorsM7 =  professors.filter(function(profe) {
+  return profe.assignatura == 'M7';
+});
 
 //Map
 const usuaris = [

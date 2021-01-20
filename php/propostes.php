@@ -38,7 +38,7 @@ class Proposta {
 
                 echo '<tr>
                         <td>'. $row['Nom'] .'</td>
-                        <td>'. ($row['Estat'] == 'No acceptat' ? 'Pendent per acceptar' : 'Proposta ja acceptada').'</td>
+                        <td>'. ($row['estat'] == 'No acceptat' ? 'Pendent per acceptar' : 'Proposta ja acceptada').'</td>
                         <td>'. $row['DataPublicacio'] .'</td>
                         <td>'. ($row['DataAcceptacio'] ? $row['DataAcceptacio'] : 'No acceptada') .'</td>
                         <td>

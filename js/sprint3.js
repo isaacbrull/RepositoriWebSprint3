@@ -76,18 +76,26 @@ console.log(adquisicio);
 
 
 //Promises
-var promise = new Promise(function(resolve, reject) {
-  
-    function revisarError() {
-      resolve('No sha detectat cap error')
-    }
-  
-    setTimeout(revisarError, 10000)
-  
-  })
-  
-  console.log(promise)
+function getPosts() {
+  return new Promise(function(resolve, reject) {
+  var req = new XMLHttpRequest();
+      req.open('GET', 'https://jsonplaceholder.typicode.com/posts');
 
-  promise.then(function(message) {
-    console.log(message) 
+      req.onload = function() {
+        if (req.status == 200) {
+          resolve(JSON.parse(req.response));
+        }
+        else {
+          reject();
+        }
+      };
+
+      req.send();
   })
+}
+
+getPosts().then(r =>{
+  console.log(r);
+}).catch(() => {
+  console.log('Algo salió mal');
+});

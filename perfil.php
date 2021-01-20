@@ -44,7 +44,7 @@
 	<div class="banner text-center text-white"><h3 class="d-inline bg-dark px-2 py-1">PROVA</h3></div>
 
   <?php if($currentuser['Tipus'] !==  'Professor' || 'Alumne' || null): ?>
-    <div class="w3-sidebar w3-bar-block w3-blue" style="width:25%; background-color: lightblue;">
+    <div class="col-sm-8 align-self-center text-center" style="width:25%; background-color: lightblue;">
   <h3 class="w3-bar-item">Menu</h3>
   <a href="./perfil.php?tab=0" class="w3-bar-item w3-button">Gestió de professors</a>
   <br></br>
@@ -52,13 +52,13 @@
   <br></br>
   <a href="./perfil.php?tab=2" class="w3-bar-item w3-button">Gestió de grups</a>
   <br></br>
-
+  
 </div>
   <!--<p><a href="./perfil.php?tab=0">Gestió de professors</a></p>
   <p><a href="./perfil.php?tab=1">Gestió de alumnes</a></p>
   <p><a href="./perfil.php?tab=2">Gestió de grups</a></p>-->
         <?php endif; ?>
-        <a href="./perfil.php?tab=3" class="w3-bar-item w3-button" style="width:25%; background-color: lightblue;">Gestió de propostes</a>
+        <a href="./perfil.php?tab=3" class="col-sm-8 align-self-center text-center" style="width:25%; background-color: lightblue;">Gestió de propostes</a>
   <!--<p><a href="./perfil.php?tab=3">Gestió de propostes</a></p>-->
       </section>
     </div>

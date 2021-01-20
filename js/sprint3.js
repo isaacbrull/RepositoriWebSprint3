@@ -29,11 +29,12 @@ var professors = [
   {name: 'Alex', assignatura: 'M6'},
   {name: 'Joan', assignatura: 'M7'},
   {name: 'Toni', assignatura: 'M7'}
-  
+
 ];
 
 var professorsM7 =  professors.filter(function(profe) {
-  return profe.assignatura == 'M7';
+  // return profe.assignatura == 'M7';
+  console.log(profe.assignatura == 'M7')
 });
 
 //Map
@@ -66,7 +67,7 @@ persones.add("Sofian");
 persones.add("Joel");
 console.log(persones.size); // 4
 persones.add("Gos");
-console.log(persones.size); // 4
+console.log(persones.size); // 5
 
 console.log(persones.has("Ximo"));
 //Esborrar a pobre Ximo

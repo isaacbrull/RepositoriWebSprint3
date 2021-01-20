@@ -73,6 +73,17 @@ for (let [key, value] of informeAlumnes) {
 informeAlumnes.clear();
 informeAlumnes.size;
 
+//Map Ximo
+const map = new Map()
+
+map.set('1', 'Aixo es una mera prova')
+map.set(1, 'Hosting')
+map.set(1, 'Tesla i les bateries')
+map.set(true, 'I WON THIS GAME, BY A LOT!')
+console.log(map);
+
+
+
 //Set
 let persones = new Set();
 
@@ -126,26 +137,37 @@ console.log(adquisicio3);
    	console.log("L'espai total del hosting més barat és de " + adquisicio1.espai + " i conté un total de " + adquisicio1.correus + " de correu");
 
 //Promises
-function getPosts() {
-  return new Promise(function(resolve, reject) {
-  var req = new XMLHttpRequest();
-      req.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+const promise = new Promise((resolve, reject) => {
+  const peticio = new XMLHttpRequest();
 
-      req.onload = function() {
-        if (req.status == 200) {
-          resolve(JSON.parse(req.response));
-        }
-        else {
-          reject();
-        }
-      };
+  peticio.open("GET", "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772");
+  peticio.onload = () => {
+    if (peticio.status === 200) {
+      resolve(peticio.response);
 
-      req.send();
-  })
-}
+    } else {
+      reject(Error(peticio.statusText));
+    }
+  };
 
-getPosts().then(r =>{
-  console.log(r);
-}).catch(() => {
-  console.log('Algo salió mal');
+  peticio.onerror = () => {
+    reject(Error("Error, :/"));
+  };
+
+  peticio.send();
 });
+
+console.log("Petició feta.");
+
+promise.then((data) => {
+    console.log("S'han trobat alguns ingredients. A continuació els mostrarem:");
+    var arrayProva2 = new Array(JSON.parse(data).meals[0].strIngredient1, JSON.parse(data).meals[0].strIngredient2, JSON.parse(data).meals[0].strIngredient3);
+      for(var i=0;i<arrayProva2.length;i++){
+        console.log(arrayProva2[i]);
+      }
+  },
+  error => {
+    console.log("Promise rebutjada.");
+    console.log(error.message);
+  }
+);
